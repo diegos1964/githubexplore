@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 // import Routes from 'routes';
 
-import styles from './styles';
+import styles from 'styles';
 
 const Welcome = () => (
   // <Routes />
@@ -20,7 +20,7 @@ const Welcome = () => (
         placeholder="Digite o seu usuário"
         underlineColorAndroid="rgba(0, 0, 0, 0)"
       />
-      <TouchableOpacity style={styles.button} onPress={()=>{}}>
+      <TouchableOpacity style={styles.button} onPress={() => {}}>
         <Text style={styles.buttonText}>Prosseguir </Text>
       </TouchableOpacity>
     </View>
