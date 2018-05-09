@@ -3,7 +3,7 @@ import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 
 // import Routes from 'routes';
 
-import styles from 'styles';
+import styles from './styles';
 
 const Welcome = () => (
   // <Routes />
