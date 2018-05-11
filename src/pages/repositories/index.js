@@ -1,9 +1,9 @@
 import React from 'react';
-// import { View } from 'react-native';
-import Routes from 'routes';
+import { View } from 'react-native';
+
 
 const Repositories = () => (
-  <Routes />
+  <View />
 );
 
 export default Repositories;
