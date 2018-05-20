@@ -1,20 +1,19 @@
-import { StackNavigator, TabNavigator } from 'react-navigation';
+import { createStackNavigator, createMaterialTopTabNavigator } from 'react-navigation';
 
 import Welcome from 'pages/welcome';
 import Repositories from 'pages/repositories';
 import Organizations from 'pages/organizations';
 
-const Routes = StackNavigator({
+const createNavigator = (isLogged = false) => createStackNavigator({
   Welcome: { screen: Welcome },
   User: {
-    screen: TabNavigator({
+    screen: createMaterialTopTabNavigator({
       Repositories: { screen: Repositories },
       Organizations: { screen: Organizations },
     }),
   },
-  initialRouteName: 'Welcome',
-
-
+}, {
+  initialRouteName: isLogged ? 'User' : 'Welcome',
 });
 
-export default Routes;
+export default createNavigator;
