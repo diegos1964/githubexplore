@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View } from 'react-native';
 
 
-const Organizations = () => (
-  <View />
-);
-
-
-export default Organizations;
+export default class Organizations extends Component {
+  static navigationOptions = {
+    title: 'Organizações',
+  }
+  render() {
+    return <View />;
+  }
+}

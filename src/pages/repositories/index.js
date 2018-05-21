@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { View } from 'react-native';
 
-
-const Repositories = () => (
-  <View />
-);
-
-export default Repositories;
+export default class Repositories extends Component {
+  static navigationOptions = {
+    title: 'Repositórios',
+  }
+  render() {
+    return <View />;
+  }
+}

@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import 'config/ReactotronConfig';
 import 'styles';
 
-import { AsyncStorage } from 'react-native';
+import { AsyncStorage, YellowBox } from 'react-native';
 import createNavigator from 'routes';
+
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated'])
 
 export default class App extends Component {
   state = {
@@ -11,6 +13,7 @@ export default class App extends Component {
     userLogged: false,
   };
   async componentDidMount() {
+    // await AsyncStorage.clear();
     const username = await AsyncStorage.getItem('@Githuber:username');
     this.appLoaded(username);
   }
@@ -28,5 +31,4 @@ export default class App extends Component {
 
     return <Routes />;
   }
-
 }
