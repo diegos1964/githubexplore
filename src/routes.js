@@ -23,6 +23,16 @@ const createNavigator = (isLogged = false) => createStackNavigator({
     screen: createBottomTabNavigator({
       Repositories: { screen: Repositories },
       Organizations: { screen: Organizations },
+    }, {
+      tabBarOptions: {
+        showIcon: true,
+        showLabel: false,
+        activeTintColor: colors.white,
+        inactiveTintColor: colors.whiteTransparent,
+        style: {
+          backgroundColor: colors.secundary,
+        }
+      },
     }),
   },
 }, {
@@ -40,7 +50,7 @@ const createNavigator = (isLogged = false) => createStackNavigator({
       borderColor: '#ff0000',
 
     },
-    headerRight: <HeaderRight />,
+    headerRight: <HeaderRight navigation={navigation} />,
   }),
 });
 
