@@ -46,8 +46,8 @@ const createNavigator = (isLogged = false) => createStackNavigator({
     headerTitleStyle: {
       color: colors.darker,
       width: '100%',
+      fontSize: 16,
       textAlign: 'center',
-      borderColor: '#ff0000',
 
     },
     headerRight: <HeaderRight navigation={navigation} />,
